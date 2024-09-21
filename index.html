@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to Text with History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #transcription {
+            font-size: 18px;
+            margin: 10px;
+            color: #333;
+        }
+        #history {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .history-item {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voice to Text with History</h1>
+    <button id="start-btn">Start Listening</button>
+    <button id="stop-btn" disabled>Stop Listening</button>
+
+    <div id="transcription">Press "Start Listening" and speak.</div>
+
+    <div id="history">
+        <h2>Transcription History</h2>
+        <div id="history-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
